@@ -70,16 +70,15 @@ function printQuote(){
   stringHTML += randomQ.quote + "</p>";
   stringHTML += "<p class='source'>";
   stringHTML += randomQ.source;
-  if (randomQ.citation!=' '){
+  if (randomQ.citation!=undefined){ //check for not empty citation
     stringHTML += "<span class='citation'>"; //add commas after source and citation
     stringHTML += randomQ.citation + "</span>";
-  } else if (randomQ.year=== true){
+  }
+  if (randomQ.year!=undefined){ //check for not empty year
     stringHTML += "<span class='year'>";
     stringHTML += randomQ.year + "</span>";
-  } else {
-    stringHTML+= "</p>";
   }
-  // return stringHTML;
+  stringHTML+= "</p>";
   document.getElementById("quote-box").innerHTML = stringHTML;
 };
 
