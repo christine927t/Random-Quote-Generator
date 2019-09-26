@@ -8,6 +8,7 @@ let colors;
 let randomNum;
 let randomQ;
 let stringHTML;
+//let int;
 
 //background colors array
 colors = ['#004d99','#0066cc','#0080ff','#3399ff','#66b3ff','#1a8cff','#003366','#1a75ff','#4d94ff'];
@@ -99,9 +100,11 @@ function printQuote(){
 };
 
 
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-setInterval(function(){
+setInterval(function(){ //starts 8 sec interval to reload printQuote
   printQuote();
-  }, 8000);
+}, 8000);
+
+document.getElementById('loadQuote').addEventListener("click", printQuote, false); //click button for new quote
+ 
+
 
