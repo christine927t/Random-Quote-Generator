@@ -4,7 +4,7 @@
  */
 
 body {
-  background-color: #36b55c;
+  background-color: #3399ff;
   color: white;
   font-family: 'Playfair Display', serif;
 }
@@ -71,6 +71,11 @@ body {
   font-style: normal;
 }
 
+.person:before {
+  content: ", ";
+  font-style: normal;
+}
+
 #loadQuote {
   position: fixed;
   width: 12em;
@@ -81,7 +86,7 @@ body {
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
-  background-color: #36b55c;
+  background-color: #3399ff;
   padding: 15px 0;
   transition: .5s ;
 }

@@ -10,7 +10,7 @@ var randomQ;
 var stringHTML;
 
 //background colors array
-colors = ['#004d99','#0066cc','#0080ff','#3399ff','#66b3ff','#99ccff','#003366','#1a75ff','#4d94ff'];
+colors = ['#004d99','#0066cc','#0080ff','#3399ff','#66b3ff','#1a8cff','#003366','#1a75ff','#4d94ff'];
 
 //quotes array of objects
 quotes = [
@@ -20,15 +20,18 @@ quotes = [
   },
   {
     quote: "Take your risks now, as you grow older you become more fearful and less flexible. And I mean that literally. I hurt my knee this week on the treadmill, and it wasn’t even on.", 
-    source: "Amy Poehler"
+    source: "Amy Poehler",
+    person: "comedian/actress"
   },
   {
     quote: "Mother Teresa didn’t walk around complaining about her thighs – she had shit to do.", 
-    source: "Sarah Silverman"    
+    source: "Sarah Silverman",
+    person: "comedian/actress"    
   },
   {
     quote: "A lady's imagination is very rapid; it jumps from admiration to love, from love to matrimony in a moment.",
     source: "Jane Austen",
+    person: "author",
     citation: "Pride and Prejudice", 
     year: 1813
   },
@@ -39,19 +42,23 @@ quotes = [
   },
   {
     quote: "It’s my belief we developed language because of our deep inner need to complain.", 
-    source:"Lily Tomlin"
+    source: "Lily Tomlin",
+    person: "actress"
   },
   {
     quote: "Most people work just hard enough not to get fired and get paid just enough money not to quit.", 
-    source: "George Carlin"
+    source: "George Carlin",
+    person: "comedian/actor"
   },
   {
     quote: "When you have bacon in your mouth, it doesn’t matter who’s president.", 
-    source: "Louis C. K."
+    source: "Louis C. K.",
+    person: "comedian"
   },
   {
     quote: "I love deadlines. I love the whooshing noise they make as they go by.",
     source: "Douglas Adams", 
+    person: "author",
     citation: "The Salmon of Doubt",
     year: 2002
   }
@@ -89,11 +96,15 @@ function printQuote(){
   stringHTML += randomQ.quote + '</p>';
   stringHTML += '<p class="source">';
   stringHTML += randomQ.source;
-  if (randomQ.citation!=undefined){ //check for not empty citation
+  if (randomQ.person!=undefined){ //check for not empty person property
+    stringHTML += '<span class="person">'; 
+    stringHTML += randomQ.person + '</span>';
+  }
+  if (randomQ.citation!=undefined){ //check for not empty citation property
     stringHTML += '<span class="citation">'; 
     stringHTML += randomQ.citation + '</span>';
   }
-  if (randomQ.year!=undefined){ //check for not empty year
+  if (randomQ.year!=undefined){ //check for not empty year property
     stringHTML += '<span class="year">';
     stringHTML += randomQ.year + '</span>';
   }
