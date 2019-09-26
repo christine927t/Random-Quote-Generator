@@ -101,7 +101,7 @@ function printQuote(){
   document.getElementsByTagName("body").style.backgroundColor = "blue";
   x.getElementsByTagName("P")[1].style.backgroundColor = "red";
 };
-
+//some comment
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
